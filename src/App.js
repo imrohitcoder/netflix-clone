@@ -10,13 +10,13 @@ function App() {
   const user = useSelector(selectUser);
   return (
     <div className="App">
-      <Router>
+      <Router basename="/netflix-clone">
         {!user ? (
           <LoginPage />
         ) : (
           <Routes>
             <Route path="/profile" element={<Profile />} />
-            <Route path="/" element={<HomePage />} />
+            <Route path="/netflix-clone" element={<HomePage />} />
           </Routes>
         )}
       </Router>
